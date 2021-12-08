@@ -18,10 +18,6 @@
     a. http "/healthz" endpoint returning" HTTP 200 OK "for haproxy healthchecks;<br>
     b. the http "/" endpoint returning content with "container id" allows distinguishing the container from which it is served.<br>
 
-When querying localhost: 9090 on the local machine, the output will be from backend1.
-In the case of the backend1 stops, the haproxy should serve the content from backend2.
-After picking up the backend1 again, traffic should be served from backend1 again. 
-
 ## Tech Stack
 * Docker-compose
 * HAPROXY
@@ -86,6 +82,9 @@ Run:
 ```shell
    docker-composer up -d
 ```
+When querying localhost: 9090 on the local machine, the output will be from backend1.
+In the case of the backend1 stops, the haproxy should serve the content from backend2.
+After picking up the backend1 again, traffic served from backend1 again. <br>
 Use the following command for validating:
 ```shell
    curl -A "user-agent-name-here" http://localhost:9090
