@@ -16,7 +16,7 @@
     d. backend consists of two servers `backend1` and `backend2`, where `backend2` is the backup server.<br>
   2. backendN is a Python application that supports:<br>
     a. http "/healthz" endpoint returning" HTTP 200 OK "for haproxy healthchecks;<br>
-    b. the http "/" endpoint returning any content that allows distinguishing the container from which it is served.<br>
+    b. the http "/" endpoint returning content with "container id" allows distinguishing the container from which it is served.<br>
 
 When querying localhost: 9090 on the local machine, the output will be from backend1.
 In the case of the backend1 stops, the haproxy should serve the content from backend2.
@@ -84,7 +84,7 @@ Clone this repository and change the directory to the appropriate one:
 ```
 Run:
 ```shell
-	docker-composer up -d
+   docker-composer up -d
 ```
 Use the following command for validating:
 ```shell
