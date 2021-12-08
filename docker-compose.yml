@@ -8,7 +8,7 @@ services:
       - ./haproxy/blacklist_agent.lst:/usr/local/etc/haproxy/blacklist_agent.lst:ro
       - ./haproxy/whitelist_agent.lst:/usr/local/etc/haproxy/whitelist_agent.lst:ro
     ports:
-      - 9092:80
+      - 9090:80
     depends_on:
       - backend1
       - backend2

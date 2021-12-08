@@ -88,12 +88,12 @@ Run:
 ```
 Use the following command for validating:
 ```shell
-   curl -A "user-agent-name-here" http://localhost:9092
+   curl -A "user-agent-name-here" http://localhost:9090
 ```
 
 Use the following command to check health status:
 ```shell
-   curl -A "user-agent-name-here" -I http://localhost:9092/healthz
+   curl -A "user-agent-name-here" -I http://localhost:9090/healthz
 ```
 The response will be:
 ```shell
